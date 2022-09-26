@@ -1,0 +1,12 @@
+title = "Roblox Utility"
+gitRepoUrl = "https://github.com/notfenv/Roblox-Utility"
+gitSourceBranch = "main"
+
+[home]
+includeReadme = true
+
+[docusaurus]
+tagline = "Utility modules for Roblox"
+organizationName = "Mia Fenneki"
+projectName = "Roblox Utility"
+url = "https://notfenv.github.io"
