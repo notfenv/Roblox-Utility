@@ -11,7 +11,7 @@ An example Attribute may look like this:
 ```lua
 local Attribute = require(path.to.attribute)
 local Part = Instance.new(&quot;Part&quot;)
-local PartAttribute = Attribute.new(part)
+local PartAttribute = Attribute.new(Part)
 
 -- Setting an attribute:
 PartAttribute:Set(&quot;Name&quot;, 1234)
@@ -44,7 +44,7 @@ An example Attribute may look like this:
 ```lua
 local Attribute = require(path.to.attribute)
 local Part = Instance.new(&quot;Part&quot;)
-local PartAttribute = Attribute.new(part)
+local PartAttribute = Attribute.new(Part)
 
 -- Setting an attribute:
 PartAttribute:Set(&quot;Name&quot;, 1234)
@@ -71,8 +71,8 @@ PartAttribute:Destroy()
 
 -- Do note that if the instance is destroyed, the Attribute will also destroy.
 ```"><link data-rh="true" rel="canonical" href="https://notfenv.github.io/Roblox-Utility/api/Attribute"><link data-rh="true" rel="alternate" href="https://notfenv.github.io/Roblox-Utility/api/Attribute" hreflang="en"><link data-rh="true" rel="alternate" href="https://notfenv.github.io/Roblox-Utility/api/Attribute" hreflang="x-default"><link rel="stylesheet" href="/Roblox-Utility/assets/css/styles.ce453ceb.css">
-<link rel="preload" href="/Roblox-Utility/assets/js/runtime~main.7bf0d3a4.js" as="script">
-<link rel="preload" href="/Roblox-Utility/assets/js/main.14f7007b.js" as="script">
+<link rel="preload" href="/Roblox-Utility/assets/js/runtime~main.6ba61d04.js" as="script">
+<link rel="preload" href="/Roblox-Utility/assets/js/main.b50f7d7c.js" as="script">
 </head>
 <body class="navigation-with-keyboard">
 <script>!function(){function e(e){document.documentElement.setAttribute("data-theme",e)}var t=function(){var e=null;try{e=localStorage.getItem("theme")}catch(e){}return e}();null!==t?e(t):window.matchMedia("(prefers-color-scheme: dark)").matches?e("dark"):(window.matchMedia("(prefers-color-scheme: light)").matches,e("light"))}()</script><div id="__docusaurus">
@@ -84,7 +84,7 @@ PartAttribute:Destroy()
 </p>
 <pre class="language-lua"><code class="language-lua"><span class="token keyword">local</span> Attribute <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span>path<span class="token punctuation">.</span>to<span class="token punctuation">.</span>attribute<span class="token punctuation">)</span>
 <span class="token keyword">local</span> Part <span class="token operator">=</span> Instance<span class="token punctuation">.</span><span class="token function">new</span><span class="token punctuation">(</span><span class="token string">"Part"</span><span class="token punctuation">)</span>
-<span class="token keyword">local</span> PartAttribute <span class="token operator">=</span> Attribute<span class="token punctuation">.</span><span class="token function">new</span><span class="token punctuation">(</span>part<span class="token punctuation">)</span>
+<span class="token keyword">local</span> PartAttribute <span class="token operator">=</span> Attribute<span class="token punctuation">.</span><span class="token function">new</span><span class="token punctuation">(</span>Part<span class="token punctuation">)</span>
 
 <span class="token comment">-- Setting an attribute:</span>
 PartAttribute<span class="token punctuation">:</span><span class="token function">Set</span><span class="token punctuation">(</span><span class="token string">"Name"</span><span class="token punctuation">,</span> <span class="token number">1234</span><span class="token punctuation">)</span>
@@ -111,13 +111,13 @@ PartAttribute<span class="token punctuation">:</span><span class="token function
 
 <span class="token comment">-- Do note that if the instance is destroyed, the Attribute will also destroy.</span>
 </code></pre>
-</div></header><h2 class="anchor anchorWithStickyNavbar_LWe7" id="functions">Functions<a class="hash-link" href="#functions" title="Direct link to heading">​</a></h2><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="new"><code style="text-decoration:none">new</code><a class="hash-link" href="#new" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/notfenv/Roblox-Utility/blob/main/src/Attribute/init.lua#L101"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Attribute<!-- -->.</code><code class="green_DgR4">new</code><code>(</code><code>instance<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/datatype/Instance" target="_blank" rel="noopener noreferrer">Instance<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><code>) → </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/Roblox-Utility/api/Attribute">Attribute</a></code></div><div>
+</div></header><h2 class="anchor anchorWithStickyNavbar_LWe7" id="functions">Functions<a class="hash-link" href="#functions" title="Direct link to heading">​</a></h2><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="new"><code style="text-decoration:none">new</code><a class="hash-link" href="#new" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/notfenv/Roblox-Utility/blob/main/src/Attribute/init.lua#L94"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Attribute<!-- -->.</code><code class="green_DgR4">new</code><code>(</code><code>instance<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/datatype/Instance" target="_blank" rel="noopener noreferrer">Instance<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><code>) → </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/Roblox-Utility/api/Attribute">Attribute</a></code></div><div>
 <p>Constructs an Attribute for the <code>instance</code>.</p>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="Remove"><code style="text-decoration:none">Remove</code><a class="hash-link" href="#Remove" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/notfenv/Roblox-Utility/blob/main/src/Attribute/init.lua#L133"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Attribute<!-- -->:</code><code class="green_DgR4">Remove</code><code>(</code><code>attributeName<!-- -->: </code><code class="blue_P4bS">string</code><code>) → </code><code>(</code><code>)</code></div><div>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="Remove"><code style="text-decoration:none">Remove</code><a class="hash-link" href="#Remove" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/notfenv/Roblox-Utility/blob/main/src/Attribute/init.lua#L124"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Attribute<!-- -->:</code><code class="green_DgR4">Remove</code><code>(</code><code>attributeName<!-- -->: </code><code class="blue_P4bS">string</code><code>) → </code><code>(</code><code>)</code></div><div>
 <p>Removes an attribute.</p>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="Set"><code style="text-decoration:none">Set</code><a class="hash-link" href="#Set" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/notfenv/Roblox-Utility/blob/main/src/Attribute/init.lua#L143"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Attribute<!-- -->:</code><code class="green_DgR4">Set</code><code>(</code><div class="inset_uKQm"><div><code>attributeName<!-- -->: </code><code class="blue_P4bS">string</code><code>,</code></div><div><code>value<!-- -->: </code><code class="blue_P4bS">any</code></div></div><code>) → </code><code>(</code><code>)</code></div><div>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="Set"><code style="text-decoration:none">Set</code><a class="hash-link" href="#Set" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/notfenv/Roblox-Utility/blob/main/src/Attribute/init.lua#L134"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Attribute<!-- -->:</code><code class="green_DgR4">Set</code><code>(</code><div class="inset_uKQm"><div><code>attributeName<!-- -->: </code><code class="blue_P4bS">string</code><code>,</code></div><div><code>value<!-- -->: </code><code class="blue_P4bS">any</code></div></div><code>) → </code><code>(</code><code>)</code></div><div>
 <p>Sets an attribute.</p>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="Get"><code style="text-decoration:none">Get</code><a class="hash-link" href="#Get" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/notfenv/Roblox-Utility/blob/main/src/Attribute/init.lua#L173"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Attribute<!-- -->:</code><code class="green_DgR4">Get</code><code>(</code><code>attributeName<!-- -->: </code><code class="blue_P4bS">string</code><code>) → </code><code class="blue_P4bS">any</code></div><div>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="Get"><code style="text-decoration:none">Get</code><a class="hash-link" href="#Get" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/notfenv/Roblox-Utility/blob/main/src/Attribute/init.lua#L164"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Attribute<!-- -->:</code><code class="green_DgR4">Get</code><code>(</code><code>attributeName<!-- -->: </code><code class="blue_P4bS">string</code><code>) → </code><code class="blue_P4bS">any</code></div><div>
 <p>Gets an attribute.</p>
 <div class="admonition admonition-tip alert alert--success">
   <div class="admonition-heading">
@@ -142,7 +142,7 @@ PartAttribute<span class="token punctuation">:</span><span class="token function
     <p>If the instance doesn't have the attribute you are trying to find, this function will return nothing.</p>
   </div>
 </div>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="Destroy"><code style="text-decoration:none">Destroy</code><a class="hash-link" href="#Destroy" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/notfenv/Roblox-Utility/blob/main/src/Attribute/init.lua#L181"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Attribute<!-- -->:</code><code class="green_DgR4">Destroy</code><code>(</code><code>) → </code><code>(</code><code>)</code></div><div>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="Destroy"><code style="text-decoration:none">Destroy</code><a class="hash-link" href="#Destroy" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/notfenv/Roblox-Utility/blob/main/src/Attribute/init.lua#L172"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Attribute<!-- -->:</code><code class="green_DgR4">Destroy</code><code>(</code><code>) → </code><code>(</code><code>)</code></div><div>
 <p>Destroys the Attribute.</p>
 </div></div></article></div><details><summary>Show raw api</summary><pre style="max-width:100%;white-space:pre-wrap">{
     &quot;functions&quot;: [
@@ -164,7 +164,7 @@ PartAttribute<span class="token punctuation">:</span><span class="token function
             ],
             &quot;function_type&quot;: &quot;static&quot;,
             &quot;source&quot;: {
-                &quot;line&quot;: 101,
+                &quot;line&quot;: 94,
                 &quot;path&quot;: &quot;src/Attribute/init.lua&quot;
             }
         },
@@ -181,7 +181,7 @@ PartAttribute<span class="token punctuation">:</span><span class="token function
             &quot;returns&quot;: [],
             &quot;function_type&quot;: &quot;method&quot;,
             &quot;source&quot;: {
-                &quot;line&quot;: 133,
+                &quot;line&quot;: 124,
                 &quot;path&quot;: &quot;src/Attribute/init.lua&quot;
             }
         },
@@ -203,7 +203,7 @@ PartAttribute<span class="token punctuation">:</span><span class="token function
             &quot;returns&quot;: [],
             &quot;function_type&quot;: &quot;method&quot;,
             &quot;source&quot;: {
-                &quot;line&quot;: 143,
+                &quot;line&quot;: 134,
                 &quot;path&quot;: &quot;src/Attribute/init.lua&quot;
             }
         },
@@ -225,7 +225,7 @@ PartAttribute<span class="token punctuation">:</span><span class="token function
             ],
             &quot;function_type&quot;: &quot;method&quot;,
             &quot;source&quot;: {
-                &quot;line&quot;: 173,
+                &quot;line&quot;: 164,
                 &quot;path&quot;: &quot;src/Attribute/init.lua&quot;
             }
         },
@@ -236,7 +236,7 @@ PartAttribute<span class="token punctuation">:</span><span class="token function
             &quot;returns&quot;: [],
             &quot;function_type&quot;: &quot;method&quot;,
             &quot;source&quot;: {
-                &quot;line&quot;: 181,
+                &quot;line&quot;: 172,
                 &quot;path&quot;: &quot;src/Attribute/init.lua&quot;
             }
         }
@@ -244,13 +244,13 @@ PartAttribute<span class="token punctuation">:</span><span class="token function
     &quot;properties&quot;: [],
     &quot;types&quot;: [],
     &quot;name&quot;: &quot;Attribute&quot;,
-    &quot;desc&quot;: &quot;Attribute library.\n\nThis is useful for tracking and updating attributes of an instance without the absurdly long `:GetAttribute` and `:SetAttribute` functions.\nAn example Attribute may look like this:\n```lua\nlocal Attribute = require(path.to.attribute)\nlocal Part = Instance.new(\&quot;Part\&quot;)\nlocal PartAttribute = Attribute.new(part)\n\n-- Setting an attribute:\nPartAttribute:Set(\&quot;Name\&quot;, 1234)\n\n-- Getting an attribute via method:\nlocal attribute = PartAttribute:Get(\&quot;Name\&quot;)\n\n-- Getting an attribute via reference:\nlocal attribute = PartAttribute.Name\n\n-- Listening for attribute changes:\nPartAttribute.AttributeChanged:Connect(function(attribute, value)\n    print(attribute, value)\nend)\n\n-- Removing an attribute:\nPartAttribute:Remove(\&quot;Name\&quot;)\n\nprint(PartAttribute:Get(\&quot;Name\&quot;)) -- nil\nprint(PartAttribute.Name) -- nil\n\n-- Destroying the Attribute:\nPartAttribute:Destroy()\n\n-- Do note that if the instance is destroyed, the Attribute will also destroy.\n```&quot;,
+    &quot;desc&quot;: &quot;Attribute library.\n\nThis is useful for tracking and updating attributes of an instance without the absurdly long `:GetAttribute` and `:SetAttribute` functions.\nAn example Attribute may look like this:\n```lua\nlocal Attribute = require(path.to.attribute)\nlocal Part = Instance.new(\&quot;Part\&quot;)\nlocal PartAttribute = Attribute.new(Part)\n\n-- Setting an attribute:\nPartAttribute:Set(\&quot;Name\&quot;, 1234)\n\n-- Getting an attribute via method:\nlocal attribute = PartAttribute:Get(\&quot;Name\&quot;)\n\n-- Getting an attribute via reference:\nlocal attribute = PartAttribute.Name\n\n-- Listening for attribute changes:\nPartAttribute.AttributeChanged:Connect(function(attribute, value)\n    print(attribute, value)\nend)\n\n-- Removing an attribute:\nPartAttribute:Remove(\&quot;Name\&quot;)\n\nprint(PartAttribute:Get(\&quot;Name\&quot;)) -- nil\nprint(PartAttribute.Name) -- nil\n\n-- Destroying the Attribute:\nPartAttribute:Destroy()\n\n-- Do note that if the instance is destroyed, the Attribute will also destroy.\n```&quot;,
     &quot;source&quot;: {
         &quot;line&quot;: 77,
         &quot;path&quot;: &quot;src/Attribute/init.lua&quot;
     }
 }</pre></details></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#types" class="table-of-contents__link toc-highlight">Types</a></li><li><a href="#properties" class="table-of-contents__link toc-highlight">Properties</a></li><li><a href="#functions" class="table-of-contents__link toc-highlight">Functions</a><ul><li><a href="#Destroy" class="table-of-contents__link toc-highlight">:Destroy</a></li><li><a href="#Get" class="table-of-contents__link toc-highlight">:Get</a></li><li><a href="#Remove" class="table-of-contents__link toc-highlight">:Remove</a></li><li><a href="#Set" class="table-of-contents__link toc-highlight">:Set</a></li><li><a href="#new" class="table-of-contents__link toc-highlight">.new</a></li></ul></li></ul></div></div></div></div></main></div></div><footer class="footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2022 Mia Fenneki. Built with Moonwave and Docusaurus.</div></div></div></footer></div>
-<script src="/Roblox-Utility/assets/js/runtime~main.7bf0d3a4.js"></script>
-<script src="/Roblox-Utility/assets/js/main.14f7007b.js"></script>
+<script src="/Roblox-Utility/assets/js/runtime~main.6ba61d04.js"></script>
+<script src="/Roblox-Utility/assets/js/main.b50f7d7c.js"></script>
 </body>
 </html>
