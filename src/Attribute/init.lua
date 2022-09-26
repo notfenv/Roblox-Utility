@@ -76,7 +76,7 @@ end
 ]=]
 local Attribute = {}
 Attribute.__index = function(self, k)
-	if self.Destroyed then
+	if rawget(self, "IsDestroyed") then
 		error(DESTROYED_MESSAGE, 2)
 	end
 
