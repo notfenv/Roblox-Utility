@@ -16,12 +16,12 @@ local function GetAttributeNames(inst)
 	return names
 end
 
-local function Watch(class, attribute)
+local function Watch(class, attributeName)
 	local instance = class.Instance
 	local attributeChanged
-	attributeChanged = instance:GetAttributeChangedSignal(attribute):Connect(function()
-		local value = instance:GetAttribute(attribute)
-		class.AttributeChanged:Fire(attribute, value or nil)
+	attributeChanged = instance:GetAttributeChangedSignal(attributeName):Connect(function()
+		local value = instance:GetAttribute(attributeName)
+		class.AttributeChanged:Fire(attributeName, if value ~= nil then value else nil)
 
 		-- Disconnect if the attribute was removed
 		if not value then
@@ -76,18 +76,11 @@ end
 ]=]
 local Attribute = {}
 Attribute.__index = function(self, k)
-	if rawget(self, "IsDestroyed") then
-		error(DESTROYED_MESSAGE, 2)
-	end
-
 	local attributeNames = GetAttributeNames(self.Instance)
 	if table.find(attributeNames, k) then
 		return self.Instance:GetAttribute(k)
-	elseif rawget(self, k) then
-		return rawget(self, k)
-	else
-		return nil
 	end
+	return rawget(Attribute, k)
 end
 Attribute.__tostring = function(self)
 	return "Attribute(" .. self.Instance.Name .. ")"
