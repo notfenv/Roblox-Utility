@@ -46,7 +46,7 @@ end
     ```lua
     local Attribute = require(path.to.attribute)
     local Part = Instance.new("Part")
-    local PartAttribute = Attribute.new(part)
+    local PartAttribute = Attribute.new(Part)
 
     -- Setting an attribute:
     PartAttribute:Set("Name", 1234)
