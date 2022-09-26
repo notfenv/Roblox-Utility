@@ -9,5 +9,3 @@ realm = "shared"
 
 [dependencies]
 Signal = "sleitnick/signal@^1"
-Trove = "sleitnick/trove@^0.5"
-Symbol = "sleitnick/symbol@^2"
