@@ -4,7 +4,7 @@
 
 local DESTROYED_MESSAGE = "Attribute is destroyed"
 
-local Signal = require(script.Signal)
+local Signal = require(script.Parent.Signal)
 
 local function GetAttributeNames(inst)
 	local attributes = inst:GetAttributes()
