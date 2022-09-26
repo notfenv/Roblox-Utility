@@ -4,6 +4,7 @@ gitSourceBranch = "main"
 
 [home]
 includeReadme = true
+enabled = true
 
 [docusaurus]
 tagline = "Utility modules for Roblox"
