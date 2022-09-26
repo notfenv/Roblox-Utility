@@ -94,8 +94,6 @@ end
 function Attribute.new(instance)
 	local self = setmetatable({
 		Instance = instance,
-		Attributes = {},
-
 		IsDestroyed = false,
 
 		-- Signals
