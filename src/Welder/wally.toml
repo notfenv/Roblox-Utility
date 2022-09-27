@@ -1,0 +1,8 @@
+[package]
+name = "notfenv/welder"
+description = "Weld helper class"
+version = "1.0.0"
+license = "MIT"
+authors = ["Mia Fenneki"]
+registry = "https://github.com/UpliftGames/wally-index"
+realm = "shared"
