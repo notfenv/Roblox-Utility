@@ -1,0 +1,759 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="plugin-moonwave plugin-id-moonwave">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v2.3.1">
+<title data-rh="true">Math | Roblox Utility</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://notfenv.github.io/Roblox-Utility/api/Math"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docusaurus_tag" content="default"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docsearch:docusaurus_tag" content="default"><meta data-rh="true" property="og:title" content="Math | Roblox Utility"><meta data-rh="true" name="description" content="Math utilities.
+Used in project East."><meta data-rh="true" property="og:description" content="Math utilities.
+Used in project East."><link data-rh="true" rel="canonical" href="https://notfenv.github.io/Roblox-Utility/api/Math"><link data-rh="true" rel="alternate" href="https://notfenv.github.io/Roblox-Utility/api/Math" hreflang="en"><link data-rh="true" rel="alternate" href="https://notfenv.github.io/Roblox-Utility/api/Math" hreflang="x-default"><link rel="stylesheet" href="/Roblox-Utility/assets/css/styles.e1adec2f.css">
+<link rel="preload" href="/Roblox-Utility/assets/js/runtime~main.fbea8f9d.js" as="script">
+<link rel="preload" href="/Roblox-Utility/assets/js/main.a973a7a6.js" as="script">
+</head>
+<body class="navigation-with-keyboard">
+<script>!function(){function e(e){document.documentElement.setAttribute("data-theme",e)}var t=function(){var e=null;try{e=localStorage.getItem("theme")}catch(e){}return e}();null!==t?e(t):window.matchMedia("(prefers-color-scheme: dark)").matches?e("dark"):(window.matchMedia("(prefers-color-scheme: light)").matches,e("light"))}()</script><div id="__docusaurus">
+<div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="navbar navbar--fixed-top"><div class="navbar__inner"><div class="navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/Roblox-Utility/"><b class="navbar__title text--truncate">Roblox Utility</b></a><a class="navbar__item navbar__link" href="/Roblox-Utility/docs/intro">Docs</a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/Roblox-Utility/api/">API</a></div><div class="navbar__items navbar__items--right"><a href="https://github.com/notfenv/Roblox-Utility" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">GitHub<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="Switch between dark and light mode (currently light mode)" aria-label="Switch between dark and light mode (currently light mode)" aria-live="polite"><svg viewBox="0 0 24 24" width="24" height="24" class="lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" class="darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg></button></div><div class="searchBox_ZlJk"><div class="navbar__search"><span aria-label="expand searchbar" role="button" class="search-icon" tabindex="0"></span><input type="search" id="search_input_react" placeholder="Press S to Search..." aria-label="Search" class="navbar__search-input search-bar"></div></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="docusaurus_skipToContent_fallback" class="main-wrapper mainWrapper_z2l0 docPageContainer_wNNk"><div class="docPage_Dpn1"><div class="docSidebarContainer_o_re"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/Roblox-Utility/api/Attribute">​Attribute</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" href="/Roblox-Utility/api/Math">​Math</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/Roblox-Utility/api/Mutex">​Mutex</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/Roblox-Utility/api/RegionalUtils">​Regional​Utils</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/Roblox-Utility/api/RobloxPolicy">​Roblox​Policy</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/Roblox-Utility/api/Stack">​Stack</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/Roblox-Utility/api/Weight">​Weight</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/Roblox-Utility/api/Welder">​Welder</a></li></ul></nav></div></div><main class="docMainContainer_HJE1"><div class="container padding-vert--lg"><div class="row"><div class="col docItemCol_MU3C"><div class="docItemContainer_Wv98"><article><div class="member_J0w1 markdown"><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_oUs_"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><header><h1 class="docTitle_mZRt" style="text-decoration:none"><span style="display:inline-block">Math</span></h1><div class="luaClassTags_EipM"></div><div>
+<p>
+  Math utilities.
+  Used in project East.
+</p>
+</div></header><h2 class="anchor anchorWithStickyNavbar_LWe7" id="properties">Properties<a href="#properties" class="hash-link" aria-label="Direct link to Properties" title="Direct link to Properties">​</a></h2><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="epsilon"><code style="text-decoration:none">epsilon</code><a href="#epsilon" class="hash-link" aria-label="Direct link to epsilon" title="Direct link to epsilon">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/notfenv/Roblox-Utility/blob/main/src/Math/init.lua#L16"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Math<!-- -->.<!-- -->epsilon<!-- -->:<!-- --> </code> <code class="blue_P4bS">number</code></div><div></div><h2 class="anchor anchorWithStickyNavbar_LWe7" id="functions">Functions<a href="#functions" class="hash-link" aria-label="Direct link to Functions" title="Direct link to Functions">​</a></h2><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="frameDelta"><code style="text-decoration:none">frameDelta</code><a href="#frameDelta" class="hash-link" aria-label="Direct link to frameDelta" title="Direct link to frameDelta">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/notfenv/Roblox-Utility/blob/main/src/Math/init.lua#L24"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Math<!-- -->.</code><code class="green_DgR4">frameDelta</code><code>(</code><div class="inset_uKQm"><div><code>t<!-- -->: </code><code class="blue_P4bS">number</code><code>,</code></div><div><code>dt<!-- -->: </code><code class="blue_P4bS">number</code></div></div><code>) → </code><code class="blue_P4bS">number</code></div><div>
+<p>Calculates the frame delta given the time elapsed (t) and delta time (dt)</p>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="round"><code style="text-decoration:none">round</code><a href="#round" class="hash-link" aria-label="Direct link to round" title="Direct link to round">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/notfenv/Roblox-Utility/blob/main/src/Math/init.lua#L34"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Math<!-- -->.</code><code class="green_DgR4">round</code><code>(</code><div class="inset_uKQm"><div><code>value<!-- -->: </code><code class="blue_P4bS">number</code><code>,</code></div><div><code>roundingValue<!-- -->: </code><code class="blue_P4bS">number</code></div></div><code>) → </code><code class="blue_P4bS">number</code></div><div>
+<p>Rounds a value to the nearest multiple of <code>roundingValue</code></p>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="smoothLerp"><code style="text-decoration:none">smoothLerp</code><a href="#smoothLerp" class="hash-link" aria-label="Direct link to smoothLerp" title="Direct link to smoothLerp">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/notfenv/Roblox-Utility/blob/main/src/Math/init.lua#L53"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Math<!-- -->.</code><code class="green_DgR4">smoothLerp</code><code>(</code><div class="inset_uKQm"><div><code>from<!-- -->: </code><code class="blue_P4bS">number</code><code>,</code></div><div><code>to<!-- -->: </code><code class="blue_P4bS">number</code><code>,</code></div><div><code>t<!-- -->: </code><code class="blue_P4bS">number</code></div></div><code>) → </code><code class="blue_P4bS">number</code></div><div>
+<p>Smoothly interpolates between two numbers (from and to) using a smooth curve.</p>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="slerpVector"><code style="text-decoration:none">slerpVector</code><a href="#slerpVector" class="hash-link" aria-label="Direct link to slerpVector" title="Direct link to slerpVector">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/notfenv/Roblox-Utility/blob/main/src/Math/init.lua#L65"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Math<!-- -->.</code><code class="green_DgR4">slerpVector</code><code>(</code><div class="inset_uKQm"><div><code>start<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/datatype/Vector3" target="_blank" rel="noopener noreferrer">Vector3<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><code>,</code></div><div><code>to<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/datatype/Vector3" target="_blank" rel="noopener noreferrer">Vector3<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><code>,</code></div><div><code>t<!-- -->: </code><code class="blue_P4bS">number</code></div></div><code>) → </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/datatype/Vector3" target="_blank" rel="noopener noreferrer">Vector3<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code></div><div>
+<p>Interpolates between two vectors (<code>start</code> and <code>to</code>) using spherical linear interpolation.</p>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="safeLerp"><code style="text-decoration:none">safeLerp</code><a href="#safeLerp" class="hash-link" aria-label="Direct link to safeLerp" title="Direct link to safeLerp">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/notfenv/Roblox-Utility/blob/main/src/Math/init.lua#L79"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Math<!-- -->.</code><code class="green_DgR4">safeLerp</code><code>(</code><div class="inset_uKQm"><div><code>from<!-- -->: </code><code class="blue_P4bS">number</code><code class="op_lSLc"> | </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/datatype/Color3" target="_blank" rel="noopener noreferrer">Color3<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><code>,</code></div><div><code>to<!-- -->: </code><code class="blue_P4bS">number</code><code class="op_lSLc"> | </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/datatype/Color3" target="_blank" rel="noopener noreferrer">Color3<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><code>,</code></div><div><code>t<!-- -->: </code><code class="blue_P4bS">number</code></div></div><code>) → </code><code class="blue_P4bS">number</code><code class="op_lSLc"> | </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/datatype/Color3" target="_blank" rel="noopener noreferrer">Color3<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code></div><div>
+<p>Safely interpolates between two numbers or colors (<code>from</code> and <code>to</code>) using linear interpolation.</p>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="randomizeVector"><code style="text-decoration:none">randomizeVector</code><a href="#randomizeVector" class="hash-link" aria-label="Direct link to randomizeVector" title="Direct link to randomizeVector">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/notfenv/Roblox-Utility/blob/main/src/Math/init.lua#L99"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Math<!-- -->.</code><code class="green_DgR4">randomizeVector</code><code>(</code><div class="inset_uKQm"><div><code>random<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/datatype/Random" target="_blank" rel="noopener noreferrer">Random<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><code>,</code></div><div><code>to<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/datatype/Vector3" target="_blank" rel="noopener noreferrer">Vector3<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><code>,</code></div><div><code>t<!-- -->: </code><code class="blue_P4bS">number</code></div></div><code>) → </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/datatype/Vector3" target="_blank" rel="noopener noreferrer">Vector3<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code></div><div>
+<p>Randomly generates a vector based on a direction (<code>to</code>) and a randomizer (<code>random</code>).</p>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="interpolateCFrame"><code style="text-decoration:none">interpolateCFrame</code><a href="#interpolateCFrame" class="hash-link" aria-label="Direct link to interpolateCFrame" title="Direct link to interpolateCFrame">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/notfenv/Roblox-Utility/blob/main/src/Math/init.lua#L113"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Math<!-- -->.</code><code class="green_DgR4">interpolateCFrame</code><code>(</code><div class="inset_uKQm"><div><code>start<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/datatype/CFrame" target="_blank" rel="noopener noreferrer">CFrame<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><code>,</code></div><div><code>to<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/datatype/CFrame" target="_blank" rel="noopener noreferrer">CFrame<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><code>,</code></div><div><code>t<!-- -->: </code><code class="blue_P4bS">number</code></div></div><code>) → </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/datatype/CFrame" target="_blank" rel="noopener noreferrer">CFrame<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code></div><div>
+<p>Interpolates between two CFrame objects (<code>start</code> and <code>to</code>) using linear interpolation.</p>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="lerpColor3"><code style="text-decoration:none">lerpColor3</code><a href="#lerpColor3" class="hash-link" aria-label="Direct link to lerpColor3" title="Direct link to lerpColor3">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/notfenv/Roblox-Utility/blob/main/src/Math/init.lua#L124"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Math<!-- -->.</code><code class="green_DgR4">lerpColor3</code><code>(</code><div class="inset_uKQm"><div><code>from<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/datatype/Color3" target="_blank" rel="noopener noreferrer">Color3<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><code>,</code></div><div><code>to<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/datatype/Color3" target="_blank" rel="noopener noreferrer">Color3<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><code>,</code></div><div><code>t<!-- -->: </code><code class="blue_P4bS">number</code></div></div><code>) → </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/datatype/Color3" target="_blank" rel="noopener noreferrer">Color3<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code></div><div>
+<p>Interpolates between two colors (<code>from</code> and <code>to</code>) using linear interpolation.</p>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="lerp"><code style="text-decoration:none">lerp</code><a href="#lerp" class="hash-link" aria-label="Direct link to lerp" title="Direct link to lerp">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/notfenv/Roblox-Utility/blob/main/src/Math/init.lua#L139"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Math<!-- -->.</code><code class="green_DgR4">lerp</code><code>(</code><div class="inset_uKQm"><div><code>from<!-- -->: </code><code class="blue_P4bS">number</code><code>,</code></div><div><code>to<!-- -->: </code><code class="blue_P4bS">number</code><code>,</code></div><div><code>t<!-- -->: </code><code class="blue_P4bS">number</code></div></div><code>) → </code><code class="blue_P4bS">number</code></div><div>
+<p>Interpolates between two numbers (<code>from</code> and <code>to</code>) using linear interpolation.</p>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="horizontalAngle"><code style="text-decoration:none">horizontalAngle</code><a href="#horizontalAngle" class="hash-link" aria-label="Direct link to horizontalAngle" title="Direct link to horizontalAngle">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/notfenv/Roblox-Utility/blob/main/src/Math/init.lua#L148"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Math<!-- -->.</code><code class="green_DgR4">horizontalAngle</code><code>(</code><code>dir<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/datatype/Vector3" target="_blank" rel="noopener noreferrer">Vector3<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><code>) → </code><code class="blue_P4bS">number</code></div><div>
+<p>Calculates the horizontal angle of a given vector (<code>dir</code>) in degrees.</p>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="percentBetween"><code style="text-decoration:none">percentBetween</code><a href="#percentBetween" class="hash-link" aria-label="Direct link to percentBetween" title="Direct link to percentBetween">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/notfenv/Roblox-Utility/blob/main/src/Math/init.lua#L159"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Math<!-- -->.</code><code class="green_DgR4">percentBetween</code><code>(</code><div class="inset_uKQm"><div><code>min<!-- -->: </code><code class="blue_P4bS">number</code><code>,</code></div><div><code>max<!-- -->: </code><code class="blue_P4bS">number</code><code>,</code></div><div><code>oldMax<!-- -->: </code><code class="blue_P4bS">number</code></div></div><code>) → </code><code class="blue_P4bS">number</code></div><div>
+<p>Calculates the percentage between two values (<code>min</code> and <code>max</code>) relative to a third value (<code>oldMax</code>)</p>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="flat"><code style="text-decoration:none">flat</code><a href="#flat" class="hash-link" aria-label="Direct link to flat" title="Direct link to flat">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/notfenv/Roblox-Utility/blob/main/src/Math/init.lua#L171"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Math<!-- -->.</code><code class="green_DgR4">flat</code><code>(</code><code>vec<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/datatype/Vector3" target="_blank" rel="noopener noreferrer">Vector3<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><code>) → </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/datatype/Vector3" target="_blank" rel="noopener noreferrer">Vector3<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code></div><div>
+<p>Returns a copy of <code>vec</code> with its <code>Y</code> component set to 0.</p>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="gamma"><code style="text-decoration:none">gamma</code><a href="#gamma" class="hash-link" aria-label="Direct link to gamma" title="Direct link to gamma">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/notfenv/Roblox-Utility/blob/main/src/Math/init.lua#L181"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Math<!-- -->.</code><code class="green_DgR4">gamma</code><code>(</code><div class="inset_uKQm"><div><code>value<!-- -->: </code><code class="blue_P4bS">number</code><code>,</code></div><div><code>absmax<!-- -->: </code><code class="blue_P4bS">number</code><code>,</code></div><div><code>gamma<!-- -->: </code><code class="blue_P4bS">number</code></div></div><code>) → </code><code class="blue_P4bS">number</code></div><div>
+<p>Applies a gamma correction to a value (<code>value</code>) relative to a maximum value (<code>absmax</code>) and a gamma value (<code>gamma</code>).</p>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="smoothDamp"><code style="text-decoration:none">smoothDamp</code><a href="#smoothDamp" class="hash-link" aria-label="Direct link to smoothDamp" title="Direct link to smoothDamp">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/notfenv/Roblox-Utility/blob/main/src/Math/init.lua#L202"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Math<!-- -->.</code><code class="green_DgR4">smoothDamp</code><code>(</code><div class="inset_uKQm"><div><code>current<!-- -->: </code><code class="blue_P4bS">number</code><code class="op_lSLc"> | </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/datatype/Vector3" target="_blank" rel="noopener noreferrer">Vector3<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><code class="op_lSLc"> | </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/datatype/CFrame" target="_blank" rel="noopener noreferrer">CFrame<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><code class="op_lSLc"> | </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/datatype/Vector2" target="_blank" rel="noopener noreferrer">Vector2<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><code>,</code></div><div><code>target<!-- -->: </code><code class="blue_P4bS">number</code><code class="op_lSLc"> | </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/datatype/Vector3" target="_blank" rel="noopener noreferrer">Vector3<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><code class="op_lSLc"> | </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/datatype/CFrame" target="_blank" rel="noopener noreferrer">CFrame<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><code class="op_lSLc"> | </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/datatype/Vector2" target="_blank" rel="noopener noreferrer">Vector2<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><code>,</code></div><div><code>currentVelocity<!-- -->: </code><code class="blue_P4bS">number</code><code>,</code></div><div><code>smoothTime<!-- -->: </code><code class="blue_P4bS">number</code><code>,</code></div><div><code>maxSpeed<!-- -->: </code><code class="blue_P4bS">number</code><code>,</code></div><div><code>deltaTime<!-- -->: </code><code class="blue_P4bS">number</code></div></div><code>) → </code><code class="blue_P4bS">number</code><code class="op_lSLc"> | </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/datatype/Vector3" target="_blank" rel="noopener noreferrer">Vector3<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><code class="op_lSLc"> | </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/datatype/CFrame" target="_blank" rel="noopener noreferrer">CFrame<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><code class="op_lSLc"> | </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/datatype/Vector2" target="_blank" rel="noopener noreferrer">Vector2<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code></div><div>
+<p>Gradually changes a value towards a desired goal over time.</p>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="nextPowerOfTwo"><code style="text-decoration:none">nextPowerOfTwo</code><a href="#nextPowerOfTwo" class="hash-link" aria-label="Direct link to nextPowerOfTwo" title="Direct link to nextPowerOfTwo">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/notfenv/Roblox-Utility/blob/main/src/Math/init.lua#L242"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Math<!-- -->.</code><code class="green_DgR4">nextPowerOfTwo</code><code>(</code><code>value<!-- -->: </code><code class="blue_P4bS">number</code><code>) → </code><code class="blue_P4bS">number</code></div><div>
+<p>Returns the smallest power of two that is greater than or equal to <code>value</code>.</p>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="closestPowerOfTwo"><code style="text-decoration:none">closestPowerOfTwo</code><a href="#closestPowerOfTwo" class="hash-link" aria-label="Direct link to closestPowerOfTwo" title="Direct link to closestPowerOfTwo">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/notfenv/Roblox-Utility/blob/main/src/Math/init.lua#L257"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Math<!-- -->.</code><code class="green_DgR4">closestPowerOfTwo</code><code>(</code><code>value<!-- -->: </code><code class="blue_P4bS">number</code><code>) → </code><code class="blue_P4bS">number</code></div><div>
+<p>Returns the closest power of two to value.</p>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="isPowerOfTwo"><code style="text-decoration:none">isPowerOfTwo</code><a href="#isPowerOfTwo" class="hash-link" aria-label="Direct link to isPowerOfTwo" title="Direct link to isPowerOfTwo">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/notfenv/Roblox-Utility/blob/main/src/Math/init.lua#L272"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Math<!-- -->.</code><code class="green_DgR4">isPowerOfTwo</code><code>(</code><code>value<!-- -->: </code><code class="blue_P4bS">number</code><code>) → </code><code class="blue_P4bS">boolean</code></div><div>
+<p>Returns if the value is a power of two.</p>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="deltaAngle"><code style="text-decoration:none">deltaAngle</code><a href="#deltaAngle" class="hash-link" aria-label="Direct link to deltaAngle" title="Direct link to deltaAngle">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/notfenv/Roblox-Utility/blob/main/src/Math/init.lua#L282"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Math<!-- -->.</code><code class="green_DgR4">deltaAngle</code><code>(</code><div class="inset_uKQm"><div><code>current<!-- -->: </code><code class="blue_P4bS">number</code><code>,</code></div><div><code>target<!-- -->: </code><code class="blue_P4bS">number</code></div></div><code>) → </code><code class="blue_P4bS">number</code></div><div>
+<p>Calculates the shortest difference between two angles.</p>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="pingPong"><code style="text-decoration:none">pingPong</code><a href="#pingPong" class="hash-link" aria-label="Direct link to pingPong" title="Direct link to pingPong">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/notfenv/Roblox-Utility/blob/main/src/Math/init.lua#L296"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Math<!-- -->.</code><code class="green_DgR4">pingPong</code><code>(</code><div class="inset_uKQm"><div><code>t<!-- -->: </code><code class="blue_P4bS">number</code><code>,</code></div><div><code>length<!-- -->: </code><code class="blue_P4bS">number</code></div></div><code>) → </code><code class="blue_P4bS">number</code></div><div>
+<p>PingPongs the value <code>t</code>, so that it is never larger than <code>length</code> and never smaller than 0.</p>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="inverseLerp"><code style="text-decoration:none">inverseLerp</code><a href="#inverseLerp" class="hash-link" aria-label="Direct link to inverseLerp" title="Direct link to inverseLerp">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/notfenv/Roblox-Utility/blob/main/src/Math/init.lua#L307"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Math<!-- -->.</code><code class="green_DgR4">inverseLerp</code><code>(</code><div class="inset_uKQm"><div><code>a<!-- -->: </code><code class="blue_P4bS">number</code><code>,</code></div><div><code>b<!-- -->: </code><code class="blue_P4bS">number</code><code>,</code></div><div><code>value<!-- -->: </code><code class="blue_P4bS">number</code></div></div><code>) → </code><code class="blue_P4bS">number</code></div><div>
+<p>Calculates the inverse interpolation of two values.</p>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="smoothDampAngle"><code style="text-decoration:none">smoothDampAngle</code><a href="#smoothDampAngle" class="hash-link" aria-label="Direct link to smoothDampAngle" title="Direct link to smoothDampAngle">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/notfenv/Roblox-Utility/blob/main/src/Math/init.lua#L326"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Math<!-- -->.</code><code class="green_DgR4">smoothDampAngle</code><code>(</code><div class="inset_uKQm"><div><code>current<!-- -->: </code><code class="blue_P4bS">number</code><code>,</code></div><div><code>target<!-- -->: </code><code class="blue_P4bS">number</code><code>,</code></div><div><code>currentVelocity<!-- -->: </code><code class="blue_P4bS">number</code><code>,</code></div><div><code>smoothTime<!-- -->: </code><code class="blue_P4bS">number</code><code>,</code></div><div><code>maxSpeed<!-- -->: </code><code class="blue_P4bS">number?</code><code>,</code></div><div><code>deltaTime<!-- -->: </code><code class="blue_P4bS">number?</code></div></div><code>) → </code><code class="blue_P4bS">number</code></div><div>
+<p>
+  Smoothly changes an angle in degrees towards a desired angle over time.
+  Returns the new angle after the change.
+</p>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="approximately"><code style="text-decoration:none">approximately</code><a href="#approximately" class="hash-link" aria-label="Direct link to approximately" title="Direct link to approximately">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/notfenv/Roblox-Utility/blob/main/src/Math/init.lua#L354"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Math<!-- -->.</code><code class="green_DgR4">approximately</code><code>(</code><div class="inset_uKQm"><div><code>a<!-- -->: </code><code class="blue_P4bS">number</code><code>,</code></div><div><code>b<!-- -->: </code><code class="blue_P4bS">number</code></div></div><code>) → </code><code class="blue_P4bS">boolean</code></div><div>
+<p>Compares two floating point values if they are similar</p>
+<p>
+  If a or b is zero, compare that the other is less or equal to epsilon.
+  If neither a or b are 0, then find an epsilon that is good for
+  comparing numbers at the maximum magnitude of a and b.
+  Floating points have about 7 significant digits, so
+  1.000001 can be represented while 1.0000001 is rounded to zero,
+  thus we could use an epsilon of 0.000001 for comparing values close to 1.
+  We multiply this epsilon by the biggest magnitude of a and b..
+</p>
+</div></div></article></div><details><summary>Show raw api</summary><pre style="max-width:100%;white-space:pre-wrap">{
+    &quot;functions&quot;: [
+        {
+            &quot;name&quot;: &quot;frameDelta&quot;,
+            &quot;desc&quot;: &quot;Calculates the frame delta given the time elapsed (t) and delta time (dt)&quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;t&quot;,
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;number&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;dt&quot;,
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;number&quot;
+                }
+            ],
+            &quot;returns&quot;: [
+                {
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;number&quot;
+                }
+            ],
+            &quot;function_type&quot;: &quot;static&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 24,
+                &quot;path&quot;: &quot;src/Math/init.lua&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;round&quot;,
+            &quot;desc&quot;: &quot;Rounds a value to the nearest multiple of `roundingValue`&quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;value&quot;,
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;number&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;roundingValue&quot;,
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;number&quot;
+                }
+            ],
+            &quot;returns&quot;: [
+                {
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;number&quot;
+                }
+            ],
+            &quot;function_type&quot;: &quot;static&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 34,
+                &quot;path&quot;: &quot;src/Math/init.lua&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;smoothLerp&quot;,
+            &quot;desc&quot;: &quot;Smoothly interpolates between two numbers (from and to) using a smooth curve.&quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;from&quot;,
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;number&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;to&quot;,
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;number&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;t&quot;,
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;number&quot;
+                }
+            ],
+            &quot;returns&quot;: [
+                {
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;number&quot;
+                }
+            ],
+            &quot;function_type&quot;: &quot;static&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 53,
+                &quot;path&quot;: &quot;src/Math/init.lua&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;slerpVector&quot;,
+            &quot;desc&quot;: &quot;Interpolates between two vectors (`start` and `to`) using spherical linear interpolation.&quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;start&quot;,
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;Vector3&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;to&quot;,
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;Vector3&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;t&quot;,
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;number&quot;
+                }
+            ],
+            &quot;returns&quot;: [
+                {
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;Vector3&quot;
+                }
+            ],
+            &quot;function_type&quot;: &quot;static&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 65,
+                &quot;path&quot;: &quot;src/Math/init.lua&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;safeLerp&quot;,
+            &quot;desc&quot;: &quot;Safely interpolates between two numbers or colors (`from` and `to`) using linear interpolation.&quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;from&quot;,
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;number|Color3&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;to&quot;,
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;number|Color3&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;t&quot;,
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;number&quot;
+                }
+            ],
+            &quot;returns&quot;: [
+                {
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;number|Color3&quot;
+                }
+            ],
+            &quot;function_type&quot;: &quot;static&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 79,
+                &quot;path&quot;: &quot;src/Math/init.lua&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;randomizeVector&quot;,
+            &quot;desc&quot;: &quot;Randomly generates a vector based on a direction (`to`) and a randomizer (`random`).&quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;random&quot;,
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;Random&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;to&quot;,
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;Vector3&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;t&quot;,
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;number&quot;
+                }
+            ],
+            &quot;returns&quot;: [
+                {
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;Vector3&quot;
+                }
+            ],
+            &quot;function_type&quot;: &quot;static&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 99,
+                &quot;path&quot;: &quot;src/Math/init.lua&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;interpolateCFrame&quot;,
+            &quot;desc&quot;: &quot;Interpolates between two CFrame objects (`start` and `to`) using linear interpolation.&quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;start&quot;,
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;CFrame&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;to&quot;,
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;CFrame&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;t&quot;,
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;number&quot;
+                }
+            ],
+            &quot;returns&quot;: [
+                {
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;CFrame&quot;
+                }
+            ],
+            &quot;function_type&quot;: &quot;static&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 113,
+                &quot;path&quot;: &quot;src/Math/init.lua&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;lerpColor3&quot;,
+            &quot;desc&quot;: &quot;Interpolates between two colors (`from` and `to`) using linear interpolation.&quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;from&quot;,
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;Color3&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;to&quot;,
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;Color3&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;t&quot;,
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;number&quot;
+                }
+            ],
+            &quot;returns&quot;: [
+                {
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;Color3&quot;
+                }
+            ],
+            &quot;function_type&quot;: &quot;static&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 124,
+                &quot;path&quot;: &quot;src/Math/init.lua&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;lerp&quot;,
+            &quot;desc&quot;: &quot;Interpolates between two numbers (`from` and `to`) using linear interpolation.&quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;from&quot;,
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;number&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;to&quot;,
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;number&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;t&quot;,
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;number&quot;
+                }
+            ],
+            &quot;returns&quot;: [
+                {
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;number&quot;
+                }
+            ],
+            &quot;function_type&quot;: &quot;static&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 139,
+                &quot;path&quot;: &quot;src/Math/init.lua&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;horizontalAngle&quot;,
+            &quot;desc&quot;: &quot;Calculates the horizontal angle of a given vector (`dir`) in degrees.&quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;dir&quot;,
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;Vector3&quot;
+                }
+            ],
+            &quot;returns&quot;: [
+                {
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;number&quot;
+                }
+            ],
+            &quot;function_type&quot;: &quot;static&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 148,
+                &quot;path&quot;: &quot;src/Math/init.lua&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;percentBetween&quot;,
+            &quot;desc&quot;: &quot;Calculates the percentage between two values (`min` and `max`) relative to a third value (`oldMax`)&quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;min&quot;,
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;number&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;max&quot;,
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;number&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;oldMax&quot;,
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;number&quot;
+                }
+            ],
+            &quot;returns&quot;: [
+                {
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;number&quot;
+                }
+            ],
+            &quot;function_type&quot;: &quot;static&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 159,
+                &quot;path&quot;: &quot;src/Math/init.lua&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;flat&quot;,
+            &quot;desc&quot;: &quot;Returns a copy of `vec` with its `Y` component set to 0.&quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;vec&quot;,
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;Vector3&quot;
+                }
+            ],
+            &quot;returns&quot;: [
+                {
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;Vector3&quot;
+                }
+            ],
+            &quot;function_type&quot;: &quot;static&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 171,
+                &quot;path&quot;: &quot;src/Math/init.lua&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;gamma&quot;,
+            &quot;desc&quot;: &quot;Applies a gamma correction to a value (`value`) relative to a maximum value (`absmax`) and a gamma value (`gamma`).&quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;value&quot;,
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;number&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;absmax&quot;,
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;number&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;gamma&quot;,
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;number&quot;
+                }
+            ],
+            &quot;returns&quot;: [
+                {
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;number\r\n&quot;
+                }
+            ],
+            &quot;function_type&quot;: &quot;static&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 181,
+                &quot;path&quot;: &quot;src/Math/init.lua&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;smoothDamp&quot;,
+            &quot;desc&quot;: &quot;Gradually changes a value towards a desired goal over time.&quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;current&quot;,
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;number|Vector3|CFrame|Vector2&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;target&quot;,
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;number|Vector3|CFrame|Vector2&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;currentVelocity&quot;,
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;number&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;smoothTime&quot;,
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;number&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;maxSpeed&quot;,
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;number&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;deltaTime&quot;,
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;number&quot;
+                }
+            ],
+            &quot;returns&quot;: [
+                {
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;number|Vector3|CFrame|Vector2&quot;
+                }
+            ],
+            &quot;function_type&quot;: &quot;static&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 202,
+                &quot;path&quot;: &quot;src/Math/init.lua&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;nextPowerOfTwo&quot;,
+            &quot;desc&quot;: &quot;Returns the smallest power of two that is greater than or equal to `value`.&quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;value&quot;,
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;number&quot;
+                }
+            ],
+            &quot;returns&quot;: [
+                {
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;number&quot;
+                }
+            ],
+            &quot;function_type&quot;: &quot;static&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 242,
+                &quot;path&quot;: &quot;src/Math/init.lua&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;closestPowerOfTwo&quot;,
+            &quot;desc&quot;: &quot;Returns the closest power of two to value.&quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;value&quot;,
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;number&quot;
+                }
+            ],
+            &quot;returns&quot;: [
+                {
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;number&quot;
+                }
+            ],
+            &quot;function_type&quot;: &quot;static&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 257,
+                &quot;path&quot;: &quot;src/Math/init.lua&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;isPowerOfTwo&quot;,
+            &quot;desc&quot;: &quot;Returns if the value is a power of two.&quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;value&quot;,
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;number&quot;
+                }
+            ],
+            &quot;returns&quot;: [
+                {
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;boolean&quot;
+                }
+            ],
+            &quot;function_type&quot;: &quot;static&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 272,
+                &quot;path&quot;: &quot;src/Math/init.lua&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;deltaAngle&quot;,
+            &quot;desc&quot;: &quot;Calculates the shortest difference between two angles.&quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;current&quot;,
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;number&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;target&quot;,
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;number&quot;
+                }
+            ],
+            &quot;returns&quot;: [
+                {
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;number&quot;
+                }
+            ],
+            &quot;function_type&quot;: &quot;static&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 282,
+                &quot;path&quot;: &quot;src/Math/init.lua&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;pingPong&quot;,
+            &quot;desc&quot;: &quot;PingPongs the value `t`, so that it is never larger than `length` and never smaller than 0.&quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;t&quot;,
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;number&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;length&quot;,
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;number&quot;
+                }
+            ],
+            &quot;returns&quot;: [
+                {
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;number&quot;
+                }
+            ],
+            &quot;function_type&quot;: &quot;static&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 296,
+                &quot;path&quot;: &quot;src/Math/init.lua&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;inverseLerp&quot;,
+            &quot;desc&quot;: &quot;Calculates the inverse interpolation of two values.&quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;a&quot;,
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;number&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;b&quot;,
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;number&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;value&quot;,
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;number&quot;
+                }
+            ],
+            &quot;returns&quot;: [
+                {
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;number\r\n&quot;
+                }
+            ],
+            &quot;function_type&quot;: &quot;static&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 307,
+                &quot;path&quot;: &quot;src/Math/init.lua&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;smoothDampAngle&quot;,
+            &quot;desc&quot;: &quot;Smoothly changes an angle in degrees towards a desired angle over time.\nReturns the new angle after the change.&quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;current&quot;,
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;number&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;target&quot;,
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;number&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;currentVelocity&quot;,
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;number&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;smoothTime&quot;,
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;number&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;maxSpeed&quot;,
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;number?&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;deltaTime&quot;,
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;number?&quot;
+                }
+            ],
+            &quot;returns&quot;: [
+                {
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;number&quot;
+                }
+            ],
+            &quot;function_type&quot;: &quot;static&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 326,
+                &quot;path&quot;: &quot;src/Math/init.lua&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;approximately&quot;,
+            &quot;desc&quot;: &quot;Compares two floating point values if they are similar\n\nIf a or b is zero, compare that the other is less or equal to epsilon.\nIf neither a or b are 0, then find an epsilon that is good for\ncomparing numbers at the maximum magnitude of a and b.\nFloating points have about 7 significant digits, so\n1.000001 can be represented while 1.0000001 is rounded to zero,\nthus we could use an epsilon of 0.000001 for comparing values close to 1.\nWe multiply this epsilon by the biggest magnitude of a and b..&quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;a&quot;,
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;number&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;b&quot;,
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;number&quot;
+                }
+            ],
+            &quot;returns&quot;: [
+                {
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;boolean&quot;
+                }
+            ],
+            &quot;function_type&quot;: &quot;static&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 354,
+                &quot;path&quot;: &quot;src/Math/init.lua&quot;
+            }
+        }
+    ],
+    &quot;properties&quot;: [
+        {
+            &quot;name&quot;: &quot;epsilon&quot;,
+            &quot;desc&quot;: &quot;&quot;,
+            &quot;lua_type&quot;: &quot;number&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 16,
+                &quot;path&quot;: &quot;src/Math/init.lua&quot;
+            }
+        }
+    ],
+    &quot;types&quot;: [],
+    &quot;name&quot;: &quot;Math&quot;,
+    &quot;desc&quot;: &quot;Math utilities.\nUsed in project East.&quot;,
+    &quot;source&quot;: {
+        &quot;line&quot;: 10,
+        &quot;path&quot;: &quot;src/Math/init.lua&quot;
+    }
+}</pre></details></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#types" class="table-of-contents__link toc-highlight">Types</a></li><li><a href="#properties" class="table-of-contents__link toc-highlight">Properties</a><ul><li><a href="#epsilon" class="table-of-contents__link toc-highlight">epsilon</a></li></ul></li><li><a href="#functions" class="table-of-contents__link toc-highlight">Functions</a><ul><li><a href="#approximately" class="table-of-contents__link toc-highlight">.approximately</a></li><li><a href="#closestPowerOfTwo" class="table-of-contents__link toc-highlight">.closestPowerOfTwo</a></li><li><a href="#deltaAngle" class="table-of-contents__link toc-highlight">.deltaAngle</a></li><li><a href="#flat" class="table-of-contents__link toc-highlight">.flat</a></li><li><a href="#frameDelta" class="table-of-contents__link toc-highlight">.frameDelta</a></li><li><a href="#gamma" class="table-of-contents__link toc-highlight">.gamma</a></li><li><a href="#horizontalAngle" class="table-of-contents__link toc-highlight">.horizontalAngle</a></li><li><a href="#interpolateCFrame" class="table-of-contents__link toc-highlight">.interpolateCFrame</a></li><li><a href="#inverseLerp" class="table-of-contents__link toc-highlight">.inverseLerp</a></li><li><a href="#isPowerOfTwo" class="table-of-contents__link toc-highlight">.isPowerOfTwo</a></li><li><a href="#lerp" class="table-of-contents__link toc-highlight">.lerp</a></li><li><a href="#lerpColor3" class="table-of-contents__link toc-highlight">.lerpColor3</a></li><li><a href="#nextPowerOfTwo" class="table-of-contents__link toc-highlight">.nextPowerOfTwo</a></li><li><a href="#percentBetween" class="table-of-contents__link toc-highlight">.percentBetween</a></li><li><a href="#pingPong" class="table-of-contents__link toc-highlight">.pingPong</a></li><li><a href="#randomizeVector" class="table-of-contents__link toc-highlight">.randomizeVector</a></li><li><a href="#round" class="table-of-contents__link toc-highlight">.round</a></li><li><a href="#safeLerp" class="table-of-contents__link toc-highlight">.safeLerp</a></li><li><a href="#slerpVector" class="table-of-contents__link toc-highlight">.slerpVector</a></li><li><a href="#smoothDamp" class="table-of-contents__link toc-highlight">.smoothDamp</a></li><li><a href="#smoothDampAngle" class="table-of-contents__link toc-highlight">.smoothDampAngle</a></li><li><a href="#smoothLerp" class="table-of-contents__link toc-highlight">.smoothLerp</a></li></ul></li></ul></div></div></div></div></main></div></div><footer class="footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2023 Mia Vince. Built with Moonwave and Docusaurus.</div></div></div></footer></div>
+<script src="/Roblox-Utility/assets/js/runtime~main.fbea8f9d.js"></script>
+<script src="/Roblox-Utility/assets/js/main.a973a7a6.js"></script>
+</body>
+</html>
