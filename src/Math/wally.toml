@@ -1,11 +1,10 @@
 [package]
-name = "notfenv/welder"
-description = "Weld helper class"
-version = "1.0.1"
+name = "notfenv/math"
+description = "Math utilities"
+version = "1.0.0"
 license = "MIT"
 authors = ["Mia Vince"]
 registry = "https://github.com/UpliftGames/wally-index"
 realm = "shared"
 
 [dependencies]
-t = "osyrisrblx/t@^3.0.0"

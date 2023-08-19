@@ -3,7 +3,7 @@ name = "notfenv/attribute"
 description = "Attribute helper class"
 version = "1.0.3"
 license = "MIT"
-authors = ["Mia Fenneki"]
+authors = ["Mia Vince"]
 registry = "https://github.com/UpliftGames/wally-index"
 realm = "shared"
 

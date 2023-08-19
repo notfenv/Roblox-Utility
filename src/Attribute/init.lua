@@ -177,5 +177,5 @@ function Attribute:Destroy()
 	self.IsDestroyed = true
 end
 
-export type Attribute = typeof(Attribute.new(Instance.new("Part")))
+export type Attribute = typeof(Attribute.new(...))
 return Attribute

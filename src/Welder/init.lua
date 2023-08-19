@@ -1,6 +1,8 @@
 -- Welder
--- Mia Fenneki
--- May 24, 2022
+-- Mia Vince
+-- October 22, 2022
+
+local t = require(script.Parent.t)
 
 --[=[
 	@class Welder
@@ -22,53 +24,59 @@ local Welder = {}
 Welder.__index = Welder
 
 --[=[
-	@param part Instance?
-	@param root Instance?
+	@param container Model?
+	@param root BasePart?
 	@return Welder
 	Constructs a Welder, used for welding instances to a root instance.
 ]=]
-function Welder.new(part, root)
+function Welder.new(container: Model?, root: BasePart?)
 	local self = setmetatable({
 		Destroyed = false,
 		BindList = {},
 	}, Welder)
 
-	if part and root then
-		self:Bind(part, root or part.PrimaryPart)
+	if container and root then
+		self:Bind(container, root or container.PrimaryPart)
 	end
 
 	return self
 end
 
 --[=[
-	@param inst Instance
-	@param weldTo Instance
-	Prepares the `inst` for welding to `weldTo`.
+	@param container Model
+	@param weldTo BasePart
+	Prepares the `container` for welding to `weldTo`.
 
 	:::caution
-	This function will go through the children of `inst`, not weld `inst` to `weldTo`.
-
-	Run this before calling `Welder:Apply()`
+	Run this before calling `Welder:Apply()
 	:::
 ]=]
-function Welder:Bind(inst, weldTo)
+function Welder:Bind(container: Model, weldTo: BasePart)
+	assert(t.any(container))
+	assert(t.any(weldTo))
+
 	if self.Destroyed then
 		return
 	end
 
-	self.Instance = inst
-	self.PrimaryPart = weldTo or inst.PrimaryPart
-	self.BindList = {}
+	self.Instance = container
+	self.PrimaryPart = weldTo or container.PrimaryPart
+	table.clear(self.BindList)
 
-	-- Cache:
-	for _, v in ipairs(self.Instance:GetChildren()) do
-		if v:IsA("BasePart") and v ~= weldTo then
-			table.insert(self.BindList, {
-				self.PrimaryPart,
-				v,
-				self.PrimaryPart.CFrame:ToObjectSpace(v.CFrame),
-			})
+	-- Cache
+	local primaryPart = self.PrimaryPart
+	for _, v in container:GetDescendants() do
+		if not v:IsA(`BasePart`) then
+			continue
 		end
+		if v == weldTo then
+			continue
+		end
+		table.insert(self.BindList, {
+			primaryPart,
+			v,
+			primaryPart.CFrame:ToObjectSpace(v.CFrame),
+		})
 	end
 end
 
@@ -82,29 +90,32 @@ end
 	welder:Apply(true) -- All joints will be a Motor6D
 	```
 ]=]
-function Welder:Apply(applyAsMotor)
+function Welder:Apply(applyAsMotor: boolean?)
 	if self.Destroyed then
 		return
 	end
-	if #self.BindList == 0 then
+
+	local bindList = self.BindList
+	if #bindList == 0 then
 		return
 	end
 
-	-- Folder:
-	local welds = self.PrimaryPart:FindFirstChild("Welds")
+	-- Folder
+	local basePrimaryPart = self.PrimaryPart
+	local welds = basePrimaryPart:FindFirstChild(`Welds`) :: Folder
 	if not welds then
-		welds = Instance.new("Folder")
-		welds.Name = "Welds"
-		welds.Parent = self.PrimaryPart
+		welds = Instance.new(`Folder`)
+		welds.Name = `Welds`
+		welds.Parent = basePrimaryPart
 	end
 
 	welds:ClearAllChildren()
 
-	-- Bind:
-	local class = if applyAsMotor then "Motor6D" else "Weld"
-	for _, bind in ipairs(self.BindList) do
-		local primaryPart, part, offset = table.unpack(bind)
-		local joint = Instance.new(class)
+	-- Bind
+	local className = if applyAsMotor then `Motor6D` else `Weld`
+	for _, bind in bindList do
+		local primaryPart, part, offset = unpack(bind)
+		local joint = Instance.new(className)
 		joint.Name = part.Name
 		joint.Part0 = primaryPart
 		joint.Part1 = part
@@ -122,10 +133,11 @@ function Welder:Break()
 		return
 	end
 
-	local welds = self.PrimaryPart:FindFirstChild("Welds")
-	if welds then
-		welds:Destroy()
+	local welds = self.PrimaryPart:FindFirstChild(`Welds`)
+	if not welds then
+		return
 	end
+	welds:Destroy()
 end
 
 --[=[
@@ -139,16 +151,16 @@ function Welder:Destroy(breakJoints)
 
 	self.Destroyed = true
 
-	-- Break:
+	-- Break
 	if breakJoints then
 		self:Break()
 	end
 
-	-- Clean:
+	-- Clean
 	self.BindList = nil
 	self.Model = nil
 	self.PrimaryPart = nil
 end
 
-export type Welder = typeof(Welder.new())
+export type Welder = typeof(Welder.new(...))
 return Welder
